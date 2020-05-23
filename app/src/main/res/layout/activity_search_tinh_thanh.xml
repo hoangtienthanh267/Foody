@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchTinhThanhActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/headerSearchTinhThanh"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/titleTinhThanh"
+            android:textColor="#FFFEFE"
+            android:text="Chọn Tỉnh Thành"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/textviewHuy"
+            android:textColor="#CFCBCB"
+            android:text="Hủy"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="30dp"
+            android:textSize="19dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/textviewXong"
+            android:textColor="#CFCBCB"
+            android:text="Xong"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="30dp"
+            android:textSize="19dp"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edittextSearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:hint="Tìm tỉnh thành"
+        android:background="@drawable/search_round"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="10dp"
+        android:inputType="text"
+        android:layout_below="@+id/headerSearchTinhThanh"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"        />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_below="@+id/edittextSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" >
+
+
+
+    </ListView>
+
+    <ImageView
+        android:id="@+id/image_tick"
+        android:layout_width="20dp"
+        android:layout_height="20dp"></ImageView>
+
+</RelativeLayout>
