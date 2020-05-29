@@ -58,7 +58,7 @@
                 android:id="@+id/buttonTinhThanh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TP. HCM"
+                android:text="Chọn tỉnh"
                 android:textStyle="bold"
                 android:background="#ffff"
                 android:layout_gravity="right"/>

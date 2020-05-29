@@ -1,5 +1,6 @@
 package hcmute.edu.vn.nhom03.foody;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,7 +10,10 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btntinhthanh;
+    public static Button btntinhthanh;
+
+
+    int REQUSET_CODE_EDIT = 123;
 
 
     @Override
@@ -21,14 +25,24 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
         btntinhthanh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SearchTinhThanhActivity.class);
-
-                startActivity(intent);
+                startActivityForResult(intent, REQUSET_CODE_EDIT);
             }
         });
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode == REQUSET_CODE_EDIT && resultCode == RESULT_OK && data != null )
+        {
+            String ten = data.getStringExtra("aaa");
+            btntinhthanh.setText(ten);
+        }
+
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }
